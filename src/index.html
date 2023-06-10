@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>亚运</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 引入bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 引入css -->
+    <link rel="stylesheet" href="css/index_css/index_style.css" />
+    <link rel="stylesheet" href="css/index_css/Normalize.css" />
+    <!-- 引入swiper轮播图 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- #引入swiper.css -->
+    <link rel="stylesheet" href="css/index_css/swiper.css" />
+    <!-- 引入common.css -->
+    <link rel="stylesheet" href="css/index_css/common.css" />
+    <!-- 引入短视频区的css -->
+    <link rel="stylesheet" href="css/index_css/shortvideo.css" />
+    <!-- 引入赛事区css -->
+    <link rel="stylesheet" href="css/index_css/match.css" />
+    <!-- 引入chat区css -->
+    <link rel="stylesheet" href="css/index_css/chat.css" />
+    <!-- 引入jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- 头部菜单栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav flex-nowrap">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">主页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="html/news_more.html">资讯</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="html/event_more.html">赛事</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/sporthall_more.html">场馆</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/shortvideo_more.html">短视频</a>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+          <button
+            id="chat-searchBtn"
+            onclick="showContent()"
+            class="btn btn-outline-secondary"
+          >
+            Chat
+          </button>
+          <div id="chat-content">
+            <button onclick="hideContent()" class="btn btn-outline-secondary">
+              返回
+            </button>
+            <iframe id="chat-iframe" src=""></iframe>
+          </div>
+          <script>
+            function showContent() {
+              var url = 'https://chatmindai.aabiji.com/#/chat/1684761047947';
+              var content = document.getElementById('chat-content');
+              var iframe = document.getElementById('chat-iframe');
+              iframe.src = url;
+              content.style.display = 'block';
+              document.body.style.width = '70%';
+              document.querySelector('.navbar').style.width = '70%';
+            }
+
+            function hideContent() {
+              document.getElementById('chat-content').style.display = 'none';
+              document.getElementById('chat-iframe').src = '';
+              document.body.style.width = '100%';
+              document.querySelector('.navbar').style.width = '100%';
+            }
+          </script>
+
+          <div class="separator"></div>
+          <a>G430</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 首页视频 -->
+    <div class="container-fluid text-center">
+      <div class="row banner_video" style="padding-top: 60px">
+        <video
+          src="https://hzwpic.hangzhou.com.cn//uploads/video/2022-04-10/bd76b2c75a16cada7ac755bec6812c56.mp4"
+          controls
+          autoplay
+          muted
+        ></video>
+      </div>
+    </div>
+
+    <!-- 资讯区域 -->
+
+    <!-- 资讯标题 -->
+    <div class="zx_title_img zixun">
+      <span>资讯</span>
+    </div>
+
+    <div class="zx_title">
+      <a href="">杭州亚运会进入倒计时</a>
+    </div>
+    <div class="container2">
+      <div class="container zx_title2">
+        <div class="row">
+          <div class="col-5 zx_title2-text">
+            <span>亚运动态</span>
+            <span><a href="html/news1.html">淳安界首体育中心迎来重大赛事</a></span>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-5 zx_title2-text">
+            <span>亚运动态</span>
+            <span><a href="html/news5.html">“迎杭州亚运会趣味跑”哈萨克斯坦站</a></span>
+          </div>
+
+          <div class="col-1"></div>
+          <div class="col-5 zx_title2-text">
+            <span>亚运动态</span>
+            <span><a href="html/news4.html">2023年国际象棋团体赛</a></span>
+          </div>
+
+          <div class="col-1"></div>
+          <div class="col-5 zx_title2-text">
+            <span>亚运动态</span>
+            <span><a href="html/news3.html">2023年东亚杯女子板球锦标赛</a></span>
+          </div>
+
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 轮播新闻 -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="2000"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="html/news2.html"><img
+              src="https://www.hangzhou2022.cn/xwzx/jdxw/ttxw/202305/W020230525476023302193.png"
+              class="d-block w-70 athlete-img"
+              style="max-width: 100%; max-height: 100%"
+          /></a>
+        </div>
+        <div class="carousel-item">
+          <a href="html/news3.html"
+            ><img
+              src="https://www.hangzhou2022.cn/xwzx/jdxw/ttxw/202305/W020230525643304676965.png"
+              class="d-block w-70 athlete-img"
+              style="max-width: 100%; max-height: 100%"
+          /></a>
+        </div>
+        <div class="carousel-item">
+          <a href="html/news4.html"
+            ><img
+              src="https://www.hangzhou2022.cn/xwzx/jdxw/ttxw/202305/W020230524404348154133.png"
+              class="d-block w-70 athlete-img"
+              style="max-width: 100%; max-height: 100%"
+          /></a>
+        </div>
+      </div>
+
+      <div class="container2">
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon fa fa-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">上一张</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon fa fa-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">下一张</span>
+        </a>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <a target="_blank" href="html/news_more.html" class="new_more">
+        <img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/newmore.png"
+          alt=""
+          id="new_more_img"
+        />
+      </a>
+    </div>
+
+    <!-- 场馆标题 -->
+    <div class="zx_title_img changguan">
+      <span>场馆</span>
+    </div>
+
+    <!-- 场馆轮播 -->
+    <div id="show">
+      <img
+        src="https://www.hangzhou2022.cn/sssg/sscg/202203/W020220331653612122746.jpg"
+        alt=""
+        data-link="html/qiantang_lunhua.html"
+      />
+      <p>
+        钱塘轮滑中心为亚运会轮滑、滑板项目比赛场馆及训练场馆，位于杭州市钱塘新区杭州东部湾体育公园内。
+      </p>
+    </div>
+    <div id="con">
+      <ul>
+        <li
+          data-text="钱塘轮滑中心为亚运会轮滑、滑板项目比赛场馆及训练场馆，位于杭州市钱塘新区杭州东部湾体育公园内。"
+        >
+          <img
+            src="https://www.hangzhou2022.cn/sssg/sscg/202203/W020220331653612122746.jpg"
+            alt=""
+            data-link="html/qiantang_lunhua.html"
+          />
+        </li>
+        <li
+          data-text="杭州奥体中心网球中心俗称“小莲花”，为亚运会网球项目比赛场馆及训练场馆。"
+        >
+          <img
+            src="https://img0.baidu.com/it/u=142113566,356504768&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+            alt=""
+            data-link="html/aoti_wangqiu.html"
+          />
+        </li>
+        <li
+          data-text="杭州奥体中心游泳馆为亚运会游泳、跳水、花样游泳项目比赛场馆及训练场馆。"
+        >
+          <img
+            src="https://www.hangzhou2022.cn/sssg/sscg/202203/W020220331654854157931.jpg"
+            alt=""
+            data-link="html/aoti_center.html"
+          />
+        </li>
+        <li
+          data-text="中国杭州电竞中心位于拱墅区，承担亚运会电子竞技比赛项目比赛。"
+        >
+          <img
+            src="https://img1.baidu.com/it/u=2045074823,4254003240&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313"
+            alt=""
+            data-link="html/dianjing_center.html"
+          />
+        </li>
+        <li
+          data-text="富阳银湖体育中心为亚运会射击、射箭和现代五项比赛场馆及训练场馆，位于杭州市富阳区银湖街道。"
+        >
+          <img
+            src="https://imagepphcloud.thepaper.cn/pph/image/191/449/4.jpg"
+            alt=""
+            data-link="html/fuyang_yinhu.html"
+          />
+        </li>
+      </ul>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <a target="_blank" href="html/sporthall_more.html" class="new_more">
+        <img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/newmore.png"
+          alt=""
+          id="new_more_img"
+        />
+      </a>
+    </div>
+    <script>
+      let oUL = document.querySelector('#con ul');
+      oUL.innerHTML += oUL.innerHTML;
+      let aLI = document.querySelectorAll('#con li');
+      let imgWidth = aLI[0].offsetWidth;
+      oUL.style.width = imgWidth * aLI.length + 'px';
+      let showImg = document.querySelector('#show img');
+
+
+      // 获取展示大图的div和img元素
+      let oShowDiv = document.getElementById('show');
+      let oShowImg = oShowDiv.children[0];
+      let oShowText = oShowDiv.children[1]; // 获取显示文字的p标签
+    
+
+      // 为每个小图片绑定click事件
+      for (let i = 0; i < aLI.length; i++) {
+        aLI[i].addEventListener('click', function () {
+          // 将当前被点击的图片的src属性赋值给oShowImg的src属性
+          oShowImg.src = this.children[0].src;
+          
+          // 动态更新p标签的文本内容
+          oShowText.innerHTML = this.dataset.text;
+          // 放大图片
+          oShowDiv.style.display = 'flex';
+          showImg.dataset.link =this.children[0].dataset.link;
+        });
+      }
+
+      let speed = -2;
+      let move = () => {
+        if (oUL.offsetLeft < -oUL.offsetWidth / 2) {
+          oUL.style.left = '0';
+        }
+        oUL.style.left = oUL.offsetLeft + speed + 'px';
+      };
+      let timer = setInterval(move, 30);
+
+      if (/Mobile/i.test(navigator.userAgent)) {
+        // 如果是移动端设备，不进行任何操作或者执行相应的移动端代码
+        oUL.addEventListener('touchstart', function () {
+          clearInterval(timer);
+        });
+        oUL.addEventListener('touchend', function () {
+          timer = setInterval(move, 30);
+        });
+      } else {
+        // 如果是电脑端设备，执行对应的电脑端代码
+        oUL.addEventListener('mouseover', function () {
+          clearInterval(timer);
+        });
+
+        // 鼠标移出重新开始定时器
+        oUL.addEventListener('mouseout', function () {
+          timer = setInterval(move, 30);
+        });
+      }
+      // 鼠标移入清除定时器
+      let img = document.querySelector('img[data-link]');
+
+img.addEventListener('click', function() {
+  window.location.href = this.dataset.link;
+});
+
+    </script>
+
+    <!-- 赛事标题 -->
+    <div class="zx_title_img saishi">
+      <span>赛事</span>
+    </div>
+
+    <!-- 赛事内容区 -->
+
+    <div class="match-container">
+      <a href="html/event_esport.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event4.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_ping.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event9.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_diving.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event30.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_swim.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event28.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_Go.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event24.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_esport.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event4.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_ping.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event9.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_diving.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event30.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_swim.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event28.jpg"
+          alt=""
+      /></a>
+      <a href="html/event_Go.html" class="match-image-box"
+        ><img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event24.jpg"
+          alt=""
+      /></a>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center">
+      <a target="_blank" href="html/event_more.html" class="new_more2">
+        <img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/newmore.png"
+          alt=""
+          id="new_more_img"
+        />
+      </a>
+    </div>
+
+    <!-- 短视频标题 -->
+    <div class="zx_title_img duanshipin">
+      <span>短视频</span>
+    </div>
+    <!-- 短视频内容区 -->
+
+    <div class="shortvideo-container">
+      <div class="shortvideo-video-container shortvideo-main-video">
+        <video
+          class="shortvideo-video"
+          src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-03-07/5d446e0dfa59ebd89234cdcacf8dd0ba_highsec.mp4"
+        ></video>
+        <div class="shortvideo-text">《从现在到未来》</div>
+      </div>
+      <div class="shortvideo-video-small-container">
+        <div class="shortvideo-video-small-container-small">
+          <div class="shortvideo-video-container shortvideo-small-video">
+            <video
+              class="shortvideo-video"
+              src="https://hzwpic.hangzhou.com.cn/uploads/video/2022-01-31/b7f70d5f379294cb7b1cc6b6b5e53f16_highsec.mp4"
+            ></video>
+            <div class="shortvideo-text">《嗨，亚运》</div>
+          </div>
+          <div class="shortvideo-video-container shortvideo-small-video">
+            <video
+              class="shortvideo-video"
+              src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-05-26/55c7144bdb1791366fb2bc2e5f167f5a_high.mp4"
+            ></video>
+            <div class="shortvideo-text">"韵味杭州"-三人篮球赛</div>
+          </div>
+        </div>
+        <div class="shortvideo-video-small-container-small">
+          <div class="shortvideo-video-container shortvideo-small-video">
+            <video
+              class="shortvideo-video"
+              src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-04-27/714e314cf141f7817f17da2257b7852b_highsec.mp4"
+            ></video>
+            <div class="shortvideo-text">亚运Music</div>
+          </div>
+          <div class="shortvideo-video-container shortvideo-small-video">
+            <video
+              class="shortvideo-video"
+              src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-04-27/1e092c0e4de358e6bdbb2f313c220bb9_high.mp4"
+            ></video>
+            <div class="shortvideo-text">《亚运Talk》</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="shortvideo-overlay">
+      <div id="shortvideo-video-box">
+        <video class="shortvideo-fullscreen-video" controls></video>
+        <button id="shortvideo-close-btn">关闭</button>
+      </div>
+    </div>
+
+    <div class="container4">
+      <div class="shortvideo-video-container shortvideo-small-video">
+        <video
+          class="shortvideo-video"
+          src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-04-27/91ceb3be2060683c04a4aa31b52751a3_highsec.mp4"
+        ></video>
+        <div class="shortvideo-text">《有你有我》</div>
+      </div>
+      <div class="shortvideo-video-container shortvideo-small-video">
+        <video
+          class="shortvideo-video"
+          src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-03-07/beb803f6667ec08657ef21c2ad48d05e_highsec.mp4"
+        ></video>
+        <div class="shortvideo-text">吉祥物冲冲冲</div>
+      </div>
+      <div class="shortvideo-video-container shortvideo-small-video">
+        <video
+          class="shortvideo-video"
+          src="https://hzwpic.hangzhou.com.cn/uploads/video/2023-03-07/e865e5d7b44c62666f6403a42747db0d_highsec.mp4"
+        ></video>
+        <div class="shortvideo-text">56个亚运场馆</div>
+      </div>
+      <div class="shortvideo-video-container shortvideo-small-video">
+        <video
+          class="shortvideo-video"
+          src="https://hzwpic.hangzhou.com.cn/uploads/video/2022-12-26/c2cd2568e7cec6253744b6ef0675ce9e_high.mp4"
+        ></video>
+        <div class="shortvideo-text">《我们都一样》</div>
+      </div>
+    </div>
+    <script>
+      const overlay = document.getElementById('shortvideo-overlay');
+      const videoBox = document.getElementById('shortvideo-video-box');
+      const fullscreenVideo = videoBox.querySelector(
+        '.shortvideo-fullscreen-video'
+      );
+      let currentVideo = null;
+
+      document
+        .querySelectorAll('.shortvideo-video-container .shortvideo-video')
+        .forEach((video) => {
+          video.addEventListener('click', () => {
+            currentVideo = video;
+            fullscreenVideo.src = video.src;
+            overlay.style.display = 'block';
+            videoBox.style.display = 'block';
+          });
+        });
+
+      document
+        .querySelectorAll('#shortvideo-close-btn, #shortvideo-overlay')
+        .forEach((el) => {
+          el.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            videoBox.style.display = 'none';
+            fullscreenVideo.pause();
+            if (currentVideo != null) {
+              currentVideo.currentTime = 0;
+              currentVideo.load();
+              currentVideo = null;
+            }
+          });
+        });
+    </script>
+
+    <div style="display: flex; justify-content: center; align-items: center">
+      <a target="_blank" href="html/shortvideo_more.html" class="new_more2">
+        <img
+          src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/newmore.png"
+          alt=""
+          id="new_more_img"
+        />
+      </a>
+    </div>
+
+    <!-- 底部联系和更多支持 -->
+    <style>
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: black;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: #3e4eca;
+      }
+      a:active {
+        color: purple;
+      }
+      .main {
+        margin: 0 auto;
+        width: 80%;
+      }
+      .footer {
+        height: 20rem;
+      }
+      .footer_line {
+        margin-top: 5rem;
+        height: 4rem;
+        border-top: 1px solid grey;
+        width: 100%;
+      }
+      .footer-content {
+        display: flex;
+        margin-top: 3rem;
+        font-size: 1rem;
+        width: 100%;
+        height: 25rem;
+        line-height: 4rem;
+        position: relative;
+      }
+      .footer-content-lt {
+        flex: 1;
+      }
+      
+      .footer-content-rt {
+        flex: 1;
+      }
+      .sjmt_box {
+        display: flex;
+      }
+      .sjmt_box div {
+        margin-left: 2rem;
+      }
+      .sjmt_box div:first-child {
+        margin-left: 0;
+      }
+      .disactive {
+        display: none;
+      }
+      .footer-rt-bottom {
+        font-size: 1rem;
+        float: right;
+        margin-bottom: 4rem;
+      }
+      .footer-rt-bottom span {
+        float: right;
+      }
+      .linkbox img {
+        width: 6rem;
+        height: 6rem;
+        display: none;
+      }
+      @media (min-width: 320px) and (max-width: 640px) {
+        /*底部更多和支持*/
+        .footer-content-rt {
+          display: none;
+        }
+        .footer-rt-bottom span {
+          float: left;
+        }
+        .linkbox {
+          position: absolute;
+          left: 20%;
+          top: 30%;
+        }
+      }
+      @media (min-width: 640px) and (max-width: 1280px) {
+        /*底部更多和支持*/
+        .footer-content-rt {
+          display: none;
+        }
+        .footer-rt-bottom span {
+          float: left;
+        }
+      }
+    </style>
+    <div class="footer main">
+      <div class="footer_line"></div>
+      <div class="footer-content">
+        <div class="footer-content-lt">
+          <p>2022年第19届亚运会G430</p>
+          <p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+          <p>邮编：310016</p>
+          <p>联系方式：hml2535541929@163.com</p>
+          <div class="sjmt_box">
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_wb_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_wb_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_wx_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_wx_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_dy_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_dy_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_tt_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_tt_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div class="linkbox">
+              <img
+                src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- hover切换图片 -->
+        <script type="text/javascript">
+          $(document).ready(function () {
+            // 当鼠标移动到包含图片的div上时
+            $('.sjmt_box div').hover(function () {
+              // 使用toggleClass()方法切换.active类
+              $(this).find('.sjmt_img').toggleClass('disactive');
+            });
+          });
+        </script>
+        <!-- hover显示二维码 -->
+        <script>
+          $(document).ready(function () {
+            // 当鼠标移动到包含图片的div上时
+            $('.sjmt_box div')
+              .mouseenter(function () {
+                // 获取当前div的索引
+                var index = $(this).index();
+                // 显示相应的二维码
+                $('.linkbox img').eq(index).show();
+              })
+              .mouseleave(function () {
+                // 隐藏所有二维码
+                $('.linkbox img').hide();
+              });
+          });
+        </script>
+        <div class="footer-content-rt">
+          <li>
+            <a href="https://olympics.com/en/">国际奥委会</a>
+          </li>
+          <li>
+            <a href="https://ocasia.org/">亚奥理事会</a>
+          </li>
+          <li>
+            <a href="http://www.olympic.cn/">中奥理事会</a>
+          </li>
+          <li>
+            <a href="https://www.sport.gov.cn/">国家体育总局</a>
+          </li>
+        </div>
+      </div>
+      <div class="footer-rt-bottom">
+        <p>
+          Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee
+          All Rights Reserved
+        </p>
+        <span>备案号：浙ICP备11041366号-13</span>
+        <span>浙公网安备：33010302003135号</span>
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/**
+*
+* @authors Your Name (you@example.org)
+* @date    2023-06-05 01:27:55
+* @version $Id$
+*/
+@media (min-width: 1130px){
+.yydt-item {
+margin-bottom: 80px;
+width: 100%;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: space-between;
+-ms-flex-pack: space-between;
+-webkit-justify-content: space-between;
+-moz-justify-content: space-between;
+justify-content: space-between;
+overflow: hidden;
+}
+}

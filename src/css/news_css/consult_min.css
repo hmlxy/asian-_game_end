@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2023-06-05 00:49:03
+ * @version $Id$
+ */
+@media (max-width: 640px){
+	.wz-cont h2.wz-title {
+		font-size: 35px;
+}
+}

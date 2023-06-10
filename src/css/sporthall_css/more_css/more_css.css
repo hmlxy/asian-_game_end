@@ -1,0 +1,383 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    background-color: #efeeee;
+    overflow-x: hidden;
+    /* 横向滚动条隐藏 */
+}
+
+html {
+    font-size: 16px;
+}
+
+
+/* rem移动适配 */
+
+
+/* 导航栏样式 */
+
+#chat-searchBtn {
+    z-index: 1;
+    padding: 10px;
+    background-color: #008cba;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+}
+
+#chat-content {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+    z-index: 1;
+    width: 400px;
+    height: calc(100% - 20px);
+    /* 留出按钮的位置 */
+}
+
+#chat-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-sizing: border-box;
+}
+
+.nav-link {
+    font-size: 17px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    font-size: auto;
+    transition: top 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+    color: blue;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo {
+    filter: saturate(300%) contrast(120%);
+}
+
+.navbar-brand {
+    width: 230px;
+    height: 50px;
+    background-image: url('https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/logo2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.separator {
+    border-left: 1px solid #ccc;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .separator {
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 0;
+    }
+    .nav-item {
+        height: 30px;
+    }
+    .navbar-nav {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* 更多场馆样式 */
+
+.title-img {
+    width: 9.38rem;
+    height: 2.5rem;
+    margin: 6.5rem 0 3.13rem 7.2rem;
+}
+
+.row {
+    width: 95%;
+    margin-bottom: 2rem;
+}
+
+.box {
+    position: relative;
+}
+
+.wangqiu,
+.aoticenter,
+.fuyang,
+.dianjing,
+.qiantang {
+    border-radius: 20px;
+    width: 100%;
+    height: 20rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.qiantang {
+    height: 30rem;
+}
+
+.wangqiu:hover,
+.aoticenter:hover,
+.fuyang:hover,
+.dianjing:hover,
+.qiantang:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    position: absolute;
+    border: 1px solid black;
+    width: 9rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .box {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/*底部联系和更多支持*/
+
+a {
+    color: black;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: #3E4ECA;
+}
+
+a:active {
+    color: purple;
+}
+
+.footer {
+    height: 20rem;
+}
+
+.footer_line {
+    margin-top: 5rem;
+    height: 4rem;
+    border-top: 1px solid grey;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 3rem;
+    font-size: 1rem;
+    width: 100%;
+    height: 25rem;
+    line-height: 4rem;
+}
+
+.footer-content-lt {
+    flex: 1;
+}
+
+.footer-content-rt {
+    flex: 1;
+}
+
+.sjmt_box {
+    display: flex;
+}
+
+.sjmt_box div {
+    margin-left: 2rem;
+}
+
+.sjmt_box div:first-child {
+    margin-left: 0;
+}
+
+.disactive {
+    display: none;
+}
+
+.footer-rt-bottom {
+    font-size: 1rem;
+    float: right;
+    margin-bottom: 4rem;
+}
+
+.footer-rt-bottom span {
+    float: right;
+}
+
+.linkbox img {
+    width: 6rem;
+    height: 6rem;
+    display: none;
+}
+
+
+/*底部联系和更多支持样式*/
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #3e4eca;
+}
+
+a:active {
+    color: purple;
+}
+
+.main {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer {
+    height: 20rem;
+}
+
+.footer_line {
+    margin-top: 5rem;
+    height: 4rem;
+    border-top: 1px solid grey;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 3rem;
+    font-size: 1rem;
+    width: 100%;
+    height: 25rem;
+    line-height: 4rem;
+    position: relative;
+}
+
+.footer-content-lt {
+    flex: 1;
+}
+
+.footer-content-rt {
+    flex: 1;
+}
+
+.sjmt_box {
+    display: flex;
+}
+
+.sjmt_box div {
+    margin-left: 2rem;
+}
+
+.sjmt_box div:first-child {
+    margin-left: 0;
+}
+
+.disactive {
+    display: none;
+}
+
+.footer-rt-bottom {
+    font-size: 1rem;
+    float: right;
+    margin-bottom: 4rem;
+}
+
+.footer-rt-bottom span {
+    float: right;
+}
+
+.linkbox img {
+    width: 6rem;
+    height: 6rem;
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    /*底部更多和支持*/
+    .footer-content-rt {
+        display: none;
+    }
+    .footer-rt-bottom span {
+        float: left;
+    }
+    .linkbox {
+        position: absolute;
+        left: 20%;
+        top: 30%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1280px) {
+    /*底部更多和支持*/
+    .footer-content-rt {
+        display: none;
+    }
+    .footer-rt-bottom span {
+        float: left;
+    }
+}
